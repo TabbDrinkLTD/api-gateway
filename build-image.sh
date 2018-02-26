@@ -1,6 +1,6 @@
-cd ~/go/src/github.com/micro/micro
+cd ~/go/src/github.com/micro/kubernetes/cmd/micro
 git pull
-go get
+go get -u
 
 echo "Copying custom plugins to micro project \n"
 cp ~/go/src/github.com/TabbDrinkLTD/api-gateway/plugins.go ./plugins.go

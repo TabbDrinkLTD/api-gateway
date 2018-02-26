@@ -27,7 +27,7 @@ spec:
           - name: MICRO_API_ADDRESS
             value: ":80"
           - name: VERSION
-            value: "2"
+            value: "3"
           ports:
           - containerPort: 80
             name: port

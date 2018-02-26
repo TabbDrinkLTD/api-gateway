@@ -18,16 +18,17 @@ spec:
     spec:
         containers:
         - name: micro-proxy
-          image: tabb-gateway
+          image: eu.gcr.io/tabb-168314/tabb-gateway:latest
           args:
             - "api"
             - "--handler=rpc"
             - "--namespace=tabb.srv"
+            - "--header 'Access-Control-Allow-Headers=X-Tabb-Place'"
           env:
           - name: MICRO_API_ADDRESS
             value: ":80"
           - name: VERSION
-            value: "1"
+            value: "2"
           ports:
           - containerPort: 80
             name: port
