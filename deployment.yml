@@ -18,7 +18,7 @@ spec:
     spec:
         containers:
         - name: micro-proxy
-          image: microhq/micro:kubernetes
+          image: tabb-gateway
           args:
             - "api"
             - "--handler=rpc"
