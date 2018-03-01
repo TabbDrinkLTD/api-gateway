@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/micro/go-plugins/micro/header"
-	"github.com/micro/micro/plugin"
+	"github.com/micro/micro/api"
 )
 
 func init() {
-	plugin.Register(header.NewPlugin())
+	api.Register(header.NewPlugin())
 }
