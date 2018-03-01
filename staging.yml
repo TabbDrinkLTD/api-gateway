@@ -20,15 +20,15 @@ spec:
         - name: micro-proxy
           image: eu.gcr.io/tabb-168314/tabb-gateway:latest
           args:
+            - "--header=Access-Control-Allow-Headers=X-Tabb-Place,x-tabb-place"
             - "api"
-            - "--header Access-Control-Allow-Headers=X-Tabb-Place,x-tabb-place"
             - "--handler=rpc"
             - "--namespace=tabb.srv"
           env:
           - name: MICRO_API_ADDRESS
             value: ":80"
           - name: VERSION
-            value: "19"
+            value: "21"
           - name: HEADER
             value: 'Access-Control-Allow-Headers="X-Tabb-Place,x-tabb-place"'
           ports:
