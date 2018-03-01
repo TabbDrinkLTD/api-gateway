@@ -6,4 +6,4 @@ RUN mkdir /micro
 WORKDIR /micro
 COPY micro .
 
-CMD ["./micro", "--header 'Access-Control-Allow-Headers=X-Tabb-Place,x-tabb-place'"]
+CMD ["./micro"]

@@ -21,13 +21,14 @@ spec:
           image: eu.gcr.io/tabb-168314/tabb-gateway:latest
           args:
             - "api"
+            - "--header Access-Control-Allow-Headers=X-Tabb-Place,x-tabb-place"
             - "--handler=rpc"
             - "--namespace=tabb.srv"
           env:
           - name: MICRO_API_ADDRESS
             value: ":80"
           - name: VERSION
-            value: "18"
+            value: "19"
           - name: HEADER
             value: 'Access-Control-Allow-Headers="X-Tabb-Place,x-tabb-place"'
           ports:
