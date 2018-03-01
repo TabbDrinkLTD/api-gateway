@@ -23,12 +23,12 @@ spec:
             - "api"
             - "--handler=rpc"
             - "--namespace=tabb.srv"
-            - "--header 'Access-Control-Allow-Headers=X-Tabb-Place'"
+            - "--header='Access-Control-Allow-Headers=X-Tabb-Place,x-tabb-place'"
           env:
           - name: MICRO_API_ADDRESS
             value: ":80"
           - name: VERSION
-            value: "2"
+            value: "4"
           ports:
           - containerPort: 80
             name: port

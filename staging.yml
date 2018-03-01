@@ -27,7 +27,9 @@ spec:
           - name: MICRO_API_ADDRESS
             value: ":80"
           - name: VERSION
-            value: "3"
+            value: "15"
+          - name: HEADER
+            value: 'Access-Control-Allow-Headers="X-Tabb-Place,x-tabb-place"'
           ports:
           - containerPort: 80
             name: port
