@@ -20,7 +20,6 @@ spec:
         - name: micro-proxy
           image: eu.gcr.io/tabb-168314/tabb-gateway:latest
           args:
-            - "--header=Access-Control-Allow-Headers=X-Tabb-Place,x-tabb-place"
             - "api"
             - "--handler=rpc"
             - "--namespace=tabb.srv"
@@ -28,9 +27,9 @@ spec:
           - name: MICRO_API_ADDRESS
             value: ":80"
           - name: VERSION
-            value: "26"
+            value: "32"
           - name: CORS_ALLOWED_HEADERS
-            value: "X-Tabb-Place, x-tabb-place"
+            value: "X-Tabb-Place, Content-Type, Authorization"
           - name: CORS_ALLOWED_ORIGINS
             value: "*"
           - name: CORS_ALLOWED_METHODS
