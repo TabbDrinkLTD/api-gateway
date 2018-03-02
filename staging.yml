@@ -21,16 +21,19 @@ spec:
           image: eu.gcr.io/tabb-168314/tabb-gateway:latest
           args:
             - "api"
-            - "--header Access-Control-Allow-Headers=X-Tabb-Place,x-tabb-place"
             - "--handler=rpc"
             - "--namespace=tabb.srv"
           env:
           - name: MICRO_API_ADDRESS
             value: ":80"
           - name: VERSION
-            value: "19"
-          - name: HEADER
-            value: 'Access-Control-Allow-Headers="X-Tabb-Place,x-tabb-place"'
+            value: "26"
+          - name: CORS_ALLOWED_HEADERS
+            value: "X-Tabb-Place, x-tabb-place"
+          - name: CORS_ALLOWED_ORIGINS
+            value: "*"
+          - name: CORS_ALLOWED_METHODS
+            value: "POST"
           ports:
           - containerPort: 80
             name: port
