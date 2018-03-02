@@ -20,6 +20,7 @@ spec:
         - name: micro-proxy
           image: eu.gcr.io/tabb-168314/tabb-gateway:latest
           args:
+            - "--header=Access-Control-Allow-Headers=X-Tabb-Place,x-tabb-place"
             - "api"
             - "--handler=rpc"
             - "--namespace=tabb.srv"
