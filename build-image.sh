@@ -1,3 +1,4 @@
+source ~/.zshrc
 cd ~/go/src/github.com/micro/kubernetes/cmd/micro
 git pull
 go get -u
